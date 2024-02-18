@@ -1,8 +1,11 @@
 import React from 'react'
+import Subtotal from './Subtotal'
+import { useSelector } from 'react-redux'
+import CartProduct from './CartProduct'
 
 const Checkout = () => {
     return (
-        <div className='flex flex-row justify-between items-center bg-white p-[20px] h-[max-content]'>
+        <div className='flex flex-row justify-between bg-white p-[20px] h-[max-content]'>
             <CheckoutLeft />
             <CheckoutRight />
         </div>
@@ -10,6 +13,7 @@ const Checkout = () => {
 }
 
 const CheckoutLeft = () => {
+    const items = useSelector(state => state.cart.items);
     return (
         <div>
             <img 
@@ -23,6 +27,15 @@ const CheckoutLeft = () => {
                 </h2>
 
                 {/* BasketItems  */}
+                {
+                    items && items.length > 0 ? (
+                        items.map((item) => (
+                            <CartProduct item={item} key={item.id}/>
+                        ))
+                    ) : (
+                        <div>Your cart is empty</div>
+                    )
+                }
             </div>
         </div>
     )
@@ -31,7 +44,9 @@ const CheckoutLeft = () => {
 const CheckoutRight = () => {
     return(
         <div>
-            <h2 className='text-3xl font-bold'>The sub total will go there</h2>
+            <Subtotal />
+            {/* <h2 className='text-3xl font-bold'>The sub total will go there</h2> */}
+
         </div>
     )
 }

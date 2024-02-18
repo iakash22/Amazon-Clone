@@ -2,7 +2,9 @@ import React from 'react'
 import SearchIcon from '@mui/icons-material/Search';
 import ShoppingBasketIcon from '@mui/icons-material/ShoppingBasket'
 import { useNavigate } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 const Header = () => {
+    const {totalItems} = useSelector(state => state.cart);
     const navigate = useNavigate();
     return (
         <div className='flex bg-[#131921] justify-between items-center z-[100] sticky top-0 h-[60px] text-white '>
@@ -47,7 +49,7 @@ const Header = () => {
                 </div>
                 <div className='flex items-center text-white cursor-pointer' >
                     <ShoppingBasketIcon onClick={() => navigate('/checkout')}/>
-                    <span className=' mx-[10px]'>0</span>
+                    <span className=' mx-[10px]'>{totalItems}</span>
                 </div>
             </div>
         </div>
