@@ -22,7 +22,7 @@ const Subtotal = () => {
 
             <button 
                 type='button'
-                className='bg-[#f0c14b] h-[30px] rounded-sm w-full border border-solid border-t-[#a88734] border-r-[#9c7e31] border-b-[#846a29] text-[#111] my-[10px]'
+                className='bg-[#f0c14b] h-[30px] rounded-sm w-full border btn text-[#111] my-[10px]'
             >
                 Proceed to checkout
             </button>

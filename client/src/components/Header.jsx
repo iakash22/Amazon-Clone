@@ -29,11 +29,15 @@ const Header = () => {
             </div>
 
             <div className='flex justify-evenly cursor-pointer'>
-                <div className='flex flex-col mx-[10px] text-white'>
+                <div 
+                    className='flex flex-col mx-[10px] text-white cursor-pointer'
+                    onClick={() => navigate('/login')}
+                >
                     <span className='text-[10px]'>
                         Hello Guest
                     </span>
-                    <span className='text-[13px] font-extrabold'>
+                    <span 
+                        className='text-[13px] font-extrabold'>
                         Sign In
                     </span>
                 </div >
@@ -47,8 +51,11 @@ const Header = () => {
                     </span >
                     <span className='text-[13px] font-extrabold'>Prime</span>
                 </div>
-                <div className='flex items-center text-white cursor-pointer' >
-                    <ShoppingBasketIcon onClick={() => navigate('/checkout')}/>
+                <div 
+                    className='flex items-center text-white cursor-pointer' 
+                    onClick={() => navigate('/checkout')}
+                >
+                    <ShoppingBasketIcon/>
                     <span className=' mx-[10px]'>{totalItems}</span>
                 </div>
             </div>

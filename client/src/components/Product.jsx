@@ -28,7 +28,7 @@ const Product = ({id,title, price, currency="$", star, image}) => {
 
             <button 
                 onClick={() => dispatch(addToCart({id,title,image,price,star,currency}))}
-                className='bg-[#f0c14b] border-[1px] border-solid p-1 border-t-[#a88734] border-r-[#9c7e31] border-b-[#846a29] text-[#111] mt-[10px]'>
+                className='bg-[#f0c14b] border-[1px] btn p-1  text-[#111] mt-[10px]'>
                 Add to Basket
             </button>
         </div>

@@ -11,6 +11,10 @@ body{
     background-color: rgb(234, 237, 237);
 }
 
+.btn{
+    border-color: #a88734 #9c7e31 #846a29;
+}
+
 .home-image{
     width: 100%;
     margin-bottom: -150px;

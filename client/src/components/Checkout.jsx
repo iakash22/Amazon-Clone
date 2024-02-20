@@ -22,7 +22,7 @@ const CheckoutLeft = () => {
                 className='w-full mb-[10px]'
             />
             <div>
-                <h2 className='text-3xl font-bold mr-[10px] p-[10px] border-b border-b-gray-200'>
+                <h2 className='text-3xl font-bold mr-[10px] p-[10px] border-b border-b-[#d3d3d3]'>
                     Your Shopping Basket
                 </h2>
 
